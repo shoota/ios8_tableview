@@ -56,6 +56,16 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 選択されたら選択状態を即解除してハイライトを消す。アニメーションで見た目はウィンク効果がつく。
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    static NSString *detailCellId = @"DetailCellView";
+    DetailCellUIViewController *dcvc = [self.storyboard instantiateViewControllerWithIdentifier:detailCellId];
+    
+    // modalで遷移
+    //[self presentViewController:dcvc animated:YES completion:nil];
+    
+    // push遷移
+    [self.navigationController pushViewController:dcvc animated:YES];
+    
 }
 
 @end
