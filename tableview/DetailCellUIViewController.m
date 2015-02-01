@@ -29,6 +29,8 @@
     }
     
     cell.textLabel.text = @"hello";
+    cell.detailTextLabel.text = @"here is cell detail";
+    
     return cell;
     
 }

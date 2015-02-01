@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)explain:(id)sender;
 @end
 
 @implementation ViewController {
@@ -50,6 +51,7 @@
     }
     cell.textLabel.text = cellText[indexPath.row];
     
+    
     return cell;
 }
 
@@ -68,4 +70,7 @@
     
 }
 
+- (IBAction)explain:(id)sender {
+        
+}
 @end
